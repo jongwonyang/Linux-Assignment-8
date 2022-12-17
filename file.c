@@ -221,6 +221,8 @@ out:
 }
 #endif
 
+ssize_t __pxt4_generic_file_write_iter(struct kiocb *iocb, struct iov_iter *from);
+
 static ssize_t
 pxt4_file_write_iter_internal(struct kiocb *iocb, struct iov_iter *from)
 {
@@ -272,7 +274,7 @@ pxt4_file_write_iter_internal(struct kiocb *iocb, struct iov_iter *from)
 		}
 	}
 
-	ret = __generic_file_write_iter(iocb, from);
+	ret = __pxt4_generic_file_write_iter(iocb, from);
 	/*
 	 * Unaligned direct AIO must be the only IO in flight. Otherwise
 	 * overlapping aligned IO after unaligned might result in data

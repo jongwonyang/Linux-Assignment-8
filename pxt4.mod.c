@@ -92,7 +92,6 @@ __used __section(__versions) = {
 	{ 0x61390934, "filemap_write_and_wait_range" },
 	{ 0xe24f5060, "jbd3_journal_forget" },
 	{ 0x7142c11e, "jbd3_journal_stop" },
-	{ 0xc32d071b, "__generic_file_write_iter" },
 	{ 0x7a7a032c, "jbd3_journal_force_commit" },
 	{ 0x9dc84bc1, "__generic_file_fsync" },
 	{ 0xc1d8cfaf, "__fdget" },
@@ -213,6 +212,7 @@ __used __section(__versions) = {
 	{ 0x14ad63d6, "dax_finish_sync_fault" },
 	{ 0x15ba50a6, "jiffies" },
 	{ 0xc9ec4e21, "free_percpu" },
+	{ 0x32e0da99, "iov_iter_fault_in_readable" },
 	{ 0xb605e852, "try_to_release_page" },
 	{ 0xc267960e, "utf8_validate" },
 	{ 0x668b19a1, "down_read" },
@@ -347,6 +347,7 @@ __used __section(__versions) = {
 	{ 0xb1c35d38, "jbd3_journal_restart" },
 	{ 0x57bc19d2, "down_write" },
 	{ 0xca669996, "fput" },
+	{ 0x542cb39d, "generic_file_direct_write" },
 	{ 0x308c3901, "perf_trace_run_bpf_submit" },
 	{ 0xf67cd4e6, "jbd3_journal_release_jbd_inode" },
 	{ 0xad5f0017, "perf_trace_buf_alloc" },
@@ -355,6 +356,7 @@ __used __section(__versions) = {
 	{ 0x18387799, "posix_acl_create" },
 	{ 0xf96a1685, "__brelse" },
 	{ 0xfe487975, "init_wait_entry" },
+	{ 0xb0e2f901, "balance_dirty_pages_ratelimited" },
 	{ 0xe3a53144, "percpu_up_write" },
 	{ 0xa239ac16, "bio_put" },
 	{ 0x14ed7825, "jbd3_journal_get_write_access" },
@@ -518,6 +520,7 @@ __used __section(__versions) = {
 	{ 0xdf96d036, "end_buffer_read_sync" },
 	{ 0x4fcb4426, "block_page_mkwrite" },
 	{ 0x990ae9bf, "sync_filesystem" },
+	{ 0x7317aa0a, "invalidate_mapping_pages" },
 	{ 0x1d09eaa6, "__set_page_dirty_buffers" },
 	{ 0x2cbbbb98, "sb_set_blocksize" },
 	{ 0x19710dc3, "__sb_start_write" },
@@ -527,6 +530,8 @@ __used __section(__versions) = {
 	{ 0x913fddba, "d_make_root" },
 	{ 0x9b1e6e16, "fscrypt_ioctl_get_key_status" },
 	{ 0x2c40c1c2, "__blockdev_direct_IO" },
+	{ 0xfa1d449a, "iov_iter_advance" },
+	{ 0x8919fd04, "iov_iter_copy_from_user_atomic" },
 	{ 0x92540fbf, "finish_wait" },
 	{ 0x1186b4f0, "inode_set_flags" },
 	{ 0xd8f7e77f, "inode_needs_sync" },
@@ -534,6 +539,7 @@ __used __section(__versions) = {
 	{ 0xfce4a2eb, "__find_get_block" },
 	{ 0x6b2870b3, "jbd3_journal_free_reserved" },
 	{ 0xca9360b5, "rb_next" },
+	{ 0x31bdc935, "iov_iter_single_seg_count" },
 	{ 0xae7194ac, "mark_buffer_dirty" },
 	{ 0xfd73d2e1, "__fscrypt_prepare_lookup" },
 	{ 0x8f9c199c, "__get_user_2" },
@@ -611,4 +617,4 @@ __used __section(__versions) = {
 MODULE_INFO(depends, "jbd3");
 
 
-MODULE_INFO(srcversion, "ACD87E7A94EEAE1864138EB");
+MODULE_INFO(srcversion, "D3EC272B49BEB48E0087F72");

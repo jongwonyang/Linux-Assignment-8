@@ -6338,6 +6338,8 @@ out7:
 }
 
 extern unsigned long long file_write_iter_time, file_write_iter_count;
+extern unsigned long long balance_dirty_pages_ratelimited_time,
+       balance_dirty_pages_ratelimited_count;
 
 DECLARE_DS_MONITORING(my_dm);
 
@@ -6358,6 +6360,7 @@ static void __exit pxt4_exit_fs(void)
 
 	printk("file_write_iter is called %lld times, and the time interval is %lldns\n"
 			,file_write_iter_count, file_write_iter_time);
+	printk("balance_dirty_pages_ratelimited is called %lld times, and the time interval is %lldns\n", balance_dirty_pages_ratelimited_count, balance_dirty_pages_ratelimited_time);
 
 	print_ds_monitoring(&my_dm);
 
